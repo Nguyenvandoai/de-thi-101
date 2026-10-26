@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thi Trực Tuyến - Mã Đề 101</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        macros: {
+          heva: ["\\begin{cases} #1 \\end{cases}", 1],
+          dfrac: ["\\frac{#1}{#2}", 2]
+        }
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans pb-16">
+
+  <!-- Header -->
+  <header class="bg-indigo-900 text-white shadow-md sticky top-0 z-30">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div>
+        <h1 class="text-base md:text-lg font-bold">BÀI THI TRẮC NGHIỆM MÔN TOÁN</h1>
+        <p class="text-xs text-indigo-200">Mã đề: 101 | Thời gian: 90 phút | 22 câu hỏi</p>
+      </div>
+      <div class="text-right">
+        <div class="text-xs text-indigo-300">Thời gian còn lại</div>
+        <div id="timer" class="text-xl font-mono font-extrabold text-amber-300">90:00</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Form thông tin học sinh -->
+  <div class="max-w-5xl mx-auto px-4 mt-4">
+    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+      <div>
+        <label class="block text-xs font-semibold text-slate-600 mb-1">Họ và tên thí sinh:</label>
+        <input type="text" id="student-name" placeholder="Nguyễn Văn A" class="w-full border rounded-lg p-2 font-medium focus:ring-2 focus:ring-indigo-500 outline-none">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-slate-600 mb-1">Số báo danh (SBD):</label>
+        <input type="text" id="student-sbd" placeholder="101001" class="w-full border rounded-lg p-2 font-mono focus:ring-2 focus:ring-indigo-500 outline-none">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-slate-600 mb-1">Lớp:</label>
+        <input type="text" id="student-class" placeholder="12A1" class="w-full border rounded-lg p-2 font-medium focus:ring-2 focus:ring-indigo-500 outline-none">
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung đề thi -->
+  <main class="max-w-5xl mx-auto px-4 mt-6 space-y-6">
+
+    <!-- PHẦN I -->
+    <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-6">
+      <div class="border-b pb-3">
+        <h2 class="text-base font-bold text-indigo-900">PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn</h2>
+        <p class="text-xs text-slate-500">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án.</p>
+      </div>
+
+      <!-- Câu 1 -->
+      <div class="space-y-3">
+        <div class="font-medium text-sm"><b>Câu 1:</b> Có $90$ người tham dự một cuộc họp, được xếp ngồi đều trên các dãy ghế. Nếu giảm số dãy ghế đi $5$ và vẫn xếp đều $90$ người đó vào các dãy còn lại thì mỗi dãy có nhiều hơn lúc đầu $3$ người. Gọi $x$ là số dãy ghế lúc đầu, với $x$ là số nguyên và $x>5$. Phương trình nào sau đây mô tả mối quan hệ trên?</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="A"> A. $\dfrac{90}{x}-\dfrac{90}{x-5}=3$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="B"> B. $\dfrac{90}{x-5}-\dfrac{90}{x}=3$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="C"> C. $\dfrac{90}{x+5}-\dfrac{90}{x}=3$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="D"> D. $\dfrac{90}{x-5}-\dfrac{90}{x}=5$</label>
+        </div>
+      </div>
+
+      <!-- Câu 2 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-1 font-medium text-sm"><b>Câu 2:</b> Hai đường tròn cùng tâm có bán kính lần lượt là $3{,}8\,\mathrm{cm}$ và $3\,\mathrm{cm}$ (tham khảo hình vẽ bên). Diện tích hình vành khuyên giới hạn bởi hai đường tròn đó bằng</div>
+          <div class="w-44 flex justify-center items-center">
+            <svg width="150" height="150" viewBox="-70 -70 140 140">
+              <circle cx="0" cy="0" r="60" fill="#e2e8f0" stroke="#334155" stroke-width="1.5" />
+              <circle cx="0" cy="0" r="45" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+              <line x1="0" y1="0" x2="60" y2="0" stroke="#000" stroke-width="1.2" />
+              <line x1="0" y1="0" x2="0" y2="-45" stroke="#000" stroke-width="1.2" />
+              <circle cx="0" cy="0" r="2.5" fill="#000" />
+              <text x="-12" y="14" font-size="12" font-weight="bold">O</text>
+              <text x="24" y="14" font-size="11">3,8</text>
+              <text x="-18" y="-20" font-size="11">3</text>
+            </svg>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="A"> A. $0{,}8\pi\,\mathrm{cm}^2$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="B"> B. $5{,}44\pi\,\mathrm{cm}^2$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="C"> C. $0{,}64\pi\,\mathrm{cm}^2$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="D"> D. $23{,}44\pi\,\mathrm{cm}^2$</label>
+        </div>
+      </div>
+
+      <!-- Câu 3 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 3:</b> Một hộp chứa $15$ viên bi màu xanh và $10$ viên bi màu đỏ. Các viên bi có cùng kích thước và khối lượng. Lấy ngẫu nhiên một viên bi trong hộp. Xác suất của biến cố “Lấy được viên bi màu đỏ” bằng</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="A"> A. $\dfrac{2}{5}$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="B"> B. $\dfrac{2}{3}$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="C"> C. $\dfrac{3}{5}$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="D"> D. $\dfrac{1}{2}$</label>
+        </div>
+      </div>
+
+      <!-- Câu 4 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 4:</b> Cho tam giác $ABC$ vuông tại $A$, có $AB=6\,\mathrm{cm}$ và $AC=8\,\mathrm{cm}$. Khẳng định nào sau đây đúng?</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="A"> A. $AB$ là tiếp tuyến của $(C;6\,\mathrm{cm})$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="B"> B. $AC$ là tiếp tuyến của $(B;6\,\mathrm{cm})$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="C"> C. $AB$ là tiếp tuyến của $(C;10\,\mathrm{cm})$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="D"> D. $AC$ là tiếp tuyến của $(B;8\,\mathrm{cm})$</label>
+        </div>
+      </div>
+
+      <!-- Câu 5 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 5:</b> Các căn bậc hai của $9$ là</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="A"> A. $3$ và $-3$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="B"> B. $3$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="C"> C. $9$ và $-9$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="D"> D. $-3$</label>
+        </div>
+      </div>
+
+      <!-- Câu 6 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-1 font-medium text-sm"><b>Câu 6:</b> Thân một cây thẳng đứng trên mặt đất phẳng, nằm ngang. Tại một thời điểm, bóng của cây trên mặt đất dài gấp đôi chiều cao của cây. Góc nhọn tạo bởi tia nắng mặt trời và mặt đất có số đo bằng bao nhiêu độ? (Làm tròn kết quả đến hàng đơn vị).</div>
+          <div class="w-48 flex justify-center items-center">
+            <svg width="170" height="110" viewBox="-15 -10 170 110">
+              <line x1="0" y1="80" x2="140" y2="80" stroke="#64748b" stroke-width="1.5" />
+              <line x1="10" y1="80" x2="10" y2="20" stroke="#0f172a" stroke-width="3" />
+              <line x1="10" y1="20" x2="130" y2="80" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4" />
+              <rect x="10" y="70" width="10" height="10" fill="none" stroke="#000" stroke-width="1" />
+              <text x="-4" y="55" font-size="12">h</text>
+              <text x="60" y="96" font-size="12">2h</text>
+              <text x="105" y="74" font-size="12">α</text>
+              <text x="5" y="96" font-size="11" font-weight="bold">A</text>
+              <text x="5" y="14" font-size="11" font-weight="bold">B</text>
+              <text x="132" y="94" font-size="11" font-weight="bold">C</text>
+            </svg>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="A"> A. $26^\circ$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="B"> B. $27^\circ$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="C"> C. $60^\circ$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="D"> D. $30^\circ$</label>
+        </div>
+      </div>
+
+      <!-- Câu 7 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-1 font-medium text-sm"><b>Câu 7:</b> Cho tam giác $ABC$ vuông tại $A$, có $AB=3\,\mathrm{cm}$, $AC=4\,\mathrm{cm}$. Giá trị của $\cot B$ bằng</div>
+          <div class="w-40 flex justify-center items-center">
+            <svg width="130" height="110" viewBox="-10 -10 130 110">
+              <polygon points="10,80 10,20 100,80" fill="none" stroke="#0f172a" stroke-width="1.8" />
+              <rect x="10" y="70" width="10" height="10" fill="none" stroke="#000" stroke-width="1" />
+              <text x="-4" y="55" font-size="12">3</text>
+              <text x="50" y="96" font-size="12">4</text>
+              <text x="3" y="96" font-size="11" font-weight="bold">A</text>
+              <text x="3" y="14" font-size="11" font-weight="bold">B</text>
+              <text x="104" y="92" font-size="11" font-weight="bold">C</text>
+            </svg>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="A"> A. $\dfrac{4}{3}$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="B"> B. $\dfrac{3}{5}$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="C"> C. $\dfrac{4}{5}$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="D"> D. $\dfrac{3}{4}$</label>
+        </div>
+      </div>
+
+      <!-- Câu 8 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 8:</b> Điều kiện xác định của biểu thức $\sqrt{1-\dfrac{x}{2}}$ là</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="A"> A. $x\le2$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="B"> B. $x<2$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="C"> C. $x>2$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="D"> D. $x\ge2$</label>
+        </div>
+      </div>
+
+      <!-- Câu 9 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 9:</b> Cho hai đường tròn $(O;5\,\mathrm{cm})$ và $(I;R\,\mathrm{cm})$, với $0<R<5$ và $OI=3\,\mathrm{cm}$. Giá trị của $R$ để hai đường tròn tiếp xúc trong là</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="A"> A. $3$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="B"> B. $1$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="C"> C. $4$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="D"> D. $2$</label>
+        </div>
+      </div>
+
+      <!-- Câu 10 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 10:</b> Một cửa hàng bán bánh với giá niêm yết $80\,000$ đồng một chiếc. Trong chương trình khuyến mại, chiếc bánh thứ nhất bán theo giá niêm yết; từ chiếc thứ hai trở đi mỗi chiếc giảm $25\%$ so với giá niêm yết. Với $480\,000$ đồng, bạn Hùng mua được nhiều nhất bao nhiêu chiếc bánh trong một lần mua?</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="A"> A. $8$ chiếc</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="B"> B. $6$ chiếc</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="C"> C. $5$ chiếc</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="D"> D. $7$ chiếc</label>
+        </div>
+      </div>
+
+      <!-- Câu 11 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 11:</b> Bác An có mảnh vườn hình chữ nhật chu vi $200\,\mathrm{m}$. Chiều dài và chiều rộng lần lượt là $x\,\mathrm{m}$ và $y\,\mathrm{m}$ ($x>y>0$). Phương trình mô tả chu vi là:</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q11" value="A"> A. $x+y=100$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q11" value="B"> B. $x+y=200$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q11" value="C"> C. $2x+y=200$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q11" value="D"> D. $xy=200$</label>
+        </div>
+      </div>
+
+      <!-- Câu 12 -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 12:</b> Cặp số nào sau đây là nghiệm của hệ phương trình $\heva{8x+3y=5\\2x-3y=5}$?</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm pl-2">
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q12" value="A"> A. $(-1;1)$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q12" value="B"> B. $(2;1)$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q12" value="C"> C. $(1;-1)$</label>
+          <label class="flex items-center gap-2 p-2 rounded-lg border hover:bg-slate-50 cursor-pointer"><input type="radio" name="q12" value="D"> D. $(-2;1)$</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHẦN II -->
+    <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-6">
+      <div class="border-b pb-3">
+        <h2 class="text-base font-bold text-amber-700">PHẦN II. Câu trắc nghiệm đúng sai</h2>
+        <p class="text-xs text-slate-500">Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn Đúng hoặc Sai.</p>
+      </div>
+
+      <!-- Câu 1 Phần II -->
+      <div class="space-y-3">
+        <div class="font-medium text-sm"><b>Câu 1:</b> Nhà bác Lan có mảnh vườn hình chữ nhật. Nếu tăng cả chiều rộng và chiều dài thêm $2\,\mathrm{m}$ thì diện tích tăng thêm $60\,\mathrm{m}^2$. Nếu giảm chiều rộng $3\,\mathrm{m}$ và chiều dài $5\,\mathrm{m}$ thì diện tích giảm $85\,\mathrm{m}^2$. Gọi chiều rộng và chiều dài ban đầu lần lượt là $x\,\mathrm{m}$ và $y\,\mathrm{m}$ ($y>x>3; y>5$).</div>
+        <div class="space-y-2 text-sm pl-2">
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>a)</b> Sau khi giảm chiều rộng $3\,\mathrm{m}$ và dài $5\,\mathrm{m}$, diện tích là $(xy-85)\,\mathrm{m}^2$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q1_a" value="true"> Đúng</label><label><input type="radio" name="p2_q1_a" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>b)</b> Chiều dài ban đầu của mảnh vườn là $18\,\mathrm{m}$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q1_b" value="true"> Đúng</label><label><input type="radio" name="p2_q1_b" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>c)</b> Diện tích ban đầu của mảnh vườn là $xy\,\mathrm{m}^2$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q1_c" value="true"> Đúng</label><label><input type="radio" name="p2_q1_c" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>d)</b> Làm lối đi rộng $1\,\mathrm{m}$ ở phía trong dọc bốn cạnh thì diện tích lối đi là $52\,\mathrm{m}^2$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q1_d" value="true"> Đúng</label><label><input type="radio" name="p2_q1_d" value="false"> Sai</label></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Câu 2 Phần II -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-1 font-medium text-sm"><b>Câu 2:</b> Cho đường tròn $(O;5\,\mathrm{cm})$ và điểm $M$ ngoài đường tròn với $OM=10\,\mathrm{cm}$. Từ $M$ kẻ hai tiếp tuyến $MA$, $MB$ đến đường tròn ($A, B$ là tiếp điểm).</div>
+          <div class="w-48 flex justify-center items-center">
+            <svg width="170" height="110" viewBox="-10 -55 170 110">
+              <circle cx="35" cy="0" r="35" fill="none" stroke="#0f172a" stroke-width="1.5" />
+              <line x1="35" y1="0" x2="140" y2="0" stroke="#64748b" stroke-width="1" stroke-dasharray="3" />
+              <line x1="35" y1="0" x2="52.5" y2="-30.3" stroke="#000" stroke-width="1.2" />
+              <line x1="35" y1="0" x2="52.5" y2="30.3" stroke="#000" stroke-width="1.2" />
+              <line x1="140" y1="0" x2="52.5" y2="-30.3" stroke="#0f172a" stroke-width="1.5" />
+              <line x1="140" y1="0" x2="52.5" y2="30.3" stroke="#0f172a" stroke-width="1.5" />
+              <text x="20" y="4" font-size="11" font-weight="bold">O</text>
+              <text x="144" y="4" font-size="11" font-weight="bold">M</text>
+              <text x="50" y="-35" font-size="11" font-weight="bold">A</text>
+              <text x="50" y="44" font-size="11" font-weight="bold">B</text>
+            </svg>
+          </div>
+        </div>
+        <div class="space-y-2 text-sm pl-2">
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>a)</b> Khoảng cách từ $O$ đến đường thẳng $MA$ bằng $5\,\mathrm{cm}$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q2_a" value="true"> Đúng</label><label><input type="radio" name="p2_q2_a" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>b)</b> Đường tròn $(M;5\,\mathrm{cm})$ cắt $(O)$ tại hai điểm phân biệt</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q2_a" value="true"> Đúng</label><label><input type="radio" name="p2_q2_b" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>c)</b> Diện tích quạt tròn giới hạn bởi $OA, OB$ và cung nhỏ $AB$ là $\dfrac{25\pi}{3}\,\mathrm{cm}^2$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q2_c" value="true"> Đúng</label><label><input type="radio" name="p2_q2_c" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>d)</b> Có đúng $9$ giá trị nguyên dương của $r$ để $(M;r\,\mathrm{cm})$ cắt $(O)$ tại 2 điểm phân biệt</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q2_d" value="true"> Đúng</label><label><input type="radio" name="p2_q2_d" value="false"> Sai</label></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Câu 3 Phần II -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 3:</b> Huyền có $200\,000$ đồng, mua $5$ bút giá $5\,000$ đ/chiếc và một số vở giá $15\,000$ đ/quyển. Gọi $x$ là số vở dự định mua ($x \in \mathbb{N}$).</div>
+        <div class="space-y-2 text-sm pl-2">
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>a)</b> Mua đủ $5$ bút thì mua được nhiều nhất $11$ quyển vở</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q3_a" value="true"> Đúng</label><label><input type="radio" name="p2_q3_a" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>b)</b> $x=12$ là một nghiệm của bất phương trình $25\,000+15\,000x\le200\,000$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q3_b" value="true"> Đúng</label><label><input type="radio" name="p2_q3_b" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>c)</b> Số tiền mua $5$ bút và $x$ quyển vở là $25\,000+15\,000x$ đồng</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q3_c" value="true"> Đúng</label><label><input type="radio" name="p2_q3_c" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>d)</b> Giảm giá $10\%$ mỗi quyển vở thì Huyền mua đủ $5$ bút và nhiều nhất $13$ quyển vở</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q3_d" value="true"> Đúng</label><label><input type="radio" name="p2_q3_d" value="false"> Sai</label></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Câu 4 Phần II -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 4:</b> Xét biểu thức $P=\dfrac{(1+\sqrt{x})^2-4\sqrt{x}}{1-\sqrt{x}}$ với $x \in \mathbb{R}$.</div>
+        <div class="space-y-2 text-sm pl-2">
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>a)</b> Mẫu thức $1-\sqrt{x}=0$ khi $x=1$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q4_a" value="true"> Đúng</label><label><input type="radio" name="p2_q4_a" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>b)</b> Căn thức $\sqrt{x}$ xác định khi và chỉ khi $x\ge0$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q4_b" value="true"> Đúng</label><label><input type="radio" name="p2_q4_b" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>c)</b> Với $x\ge0$ và $x\ne1$, ta có $P=\sqrt{x}-1$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q4_c" value="true"> Đúng</label><label><input type="radio" name="p2_q4_c" value="false"> Sai</label></div>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded border bg-slate-50">
+            <span><b>d)</b> Có đúng $8$ giá trị nguyên dương của $x$ để $P$ xác định và $P>-2$</span>
+            <div class="space-x-3"><label><input type="radio" name="p2_q4_d" value="true"> Đúng</label><label><input type="radio" name="p2_q4_d" value="false"> Sai</label></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHẦN III -->
+    <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-6">
+      <div class="border-b pb-3">
+        <h2 class="text-base font-bold text-purple-700">PHẦN III. Câu trắc nghiệm trả lời ngắn</h2>
+        <p class="text-xs text-slate-500">Thí sinh trả lời từ câu 1 đến câu 6. Điền đáp số vào ô trống.</p>
+      </div>
+
+      <!-- Câu 1 Phần III -->
+      <div class="space-y-2">
+        <div class="font-medium text-sm"><b>Câu 1:</b> Cho hệ phương trình $\heva{x+2y=m+3\\2x-3y=m}$. Biết hệ có nghiệm $(x;y)$ thỏa mãn $x+y=9$. Giá trị của $m$ bằng bao nhiêu?</div>
+        <div class="flex items-center gap-2"><span class="text-xs font-bold text-slate-500">Đáp số:</span><input type="text" id="p3_q1" class="border rounded-lg p-2 font-mono font-bold w-44 outline-none focus:ring-2 focus:ring-purple-500"></div>
+      </div>
+
+      <!-- Câu 2 Phần III -->
+      <div class="space-y-2 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 2:</b> Mỗi bạn Trọng, Thủy và Khuê tung một đồng xu $20$ lần. Số lần xuất hiện mặt sấp lần lượt là $13$, $8$, $11$. Xác suất thực nghiệm của biến cố “Xuất hiện mặt sấp” trong toàn bộ $60$ lần tung bằng bao nhiêu? (Làm tròn đến hàng phần trăm).</div>
+        <div class="flex items-center gap-2"><span class="text-xs font-bold text-slate-500">Đáp số:</span><input type="text" id="p3_q2" class="border rounded-lg p-2 font-mono font-bold w-44 outline-none focus:ring-2 focus:ring-purple-500"></div>
+      </div>
+
+      <!-- Câu 3 Phần III -->
+      <div class="space-y-2 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 3:</b> Cần sản xuất đúng $8\,000$ quả bóng tennis. Có $20$ máy giống nhau, mỗi máy sản xuất $30$ quả/giờ. Chi phí mở mỗi máy là $200\,000$ đ. Tiền công giám sát là $192\,000$ đ/giờ cho toàn bộ dàn máy. Nên dùng bao nhiêu máy để tổng chi phí nhỏ nhất?</div>
+        <div class="flex items-center gap-2"><span class="text-xs font-bold text-slate-500">Đáp số:</span><input type="text" id="p3_q3" class="border rounded-lg p-2 font-mono font-bold w-44 outline-none focus:ring-2 focus:ring-purple-500"></div>
+      </div>
+
+      <!-- Câu 4 Phần III -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 4:</b> Đồng cỏ hình chữ nhật $17{,}5\,\mathrm{m}\times10\,\mathrm{m}$. Hai cọc $P, Q$ cách nhau $7{,}5\,\mathrm{m}$ như hình vẽ. Dây buộc 2 con dê trượt qua 2 cọc. Sợi dây ngắn nhất cần dài bao nhiêu mét để mọi điểm trên đồng cỏ có ít nhất một con dê tới được và khoảng cách hai con luôn $\ge 0{,}4\,\mathrm{m}$? (Làm tròn đến hàng phần mười).</div>
+        <div class="w-full flex justify-center py-2">
+          <svg width="280" height="150" viewBox="-10 -15 240 140">
+            <rect x="0" y="0" width="210" height="120" fill="#f8fafc" stroke="#334155" stroke-width="2" />
+            <line x1="0" y1="60" x2="210" y2="60" stroke="#94a3b8" stroke-dasharray="3" />
+            <line x1="60" y1="0" x2="60" y2="120" stroke="#94a3b8" stroke-dasharray="3" />
+            <circle cx="60" cy="60" r="3.5" fill="#000" /><text x="54" y="80" font-size="12" font-weight="bold">P</text>
+            <circle cx="150" cy="60" r="3.5" fill="#000" /><text x="146" y="80" font-size="12" font-weight="bold">Q</text>
+            <text x="96" y="52" font-size="11">7,5 m</text>
+            <text x="22" y="52" font-size="11">5 m</text>
+            <text x="64" y="35" font-size="11">5 m</text>
+            <text x="85" y="-3" font-size="11">17,5 m</text>
+            <text x="214" y="65" font-size="11">10 m</text>
+          </svg>
+        </div>
+        <div class="flex items-center gap-2"><span class="text-xs font-bold text-slate-500">Đáp số:</span><input type="text" id="p3_q4" class="border rounded-lg p-2 font-mono font-bold w-44 outline-none focus:ring-2 focus:ring-purple-500"></div>
+      </div>
+
+      <!-- Câu 5 Phần III -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="font-medium text-sm"><b>Câu 5:</b> Từ điểm quan sát $A$ trên ngọn hải đăng cao $109\,\mathrm{m}$ nhìn thấy 2 tàu tại $P$ và $Q$. $AB\perp PQ$ ($B$ thuộc đất liền, $AB=109\,\mathrm{m}$). Góc nhìn tạo với phương ngang lần lượt là $13^\circ$ và $34^\circ$. Khoảng cách $PQ$ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).</div>
+        <div class="flex items-center gap-2"><span class="text-xs font-bold text-slate-500">Đáp số:</span><input type="text" id="p3_q5" class="border rounded-lg p-2 font-mono font-bold w-44 outline-none focus:ring-2 focus:ring-purple-500"></div>
+      </div>
+
+      <!-- Câu 6 Phần III -->
+      <div class="space-y-3 pt-4 border-t">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-1 font-medium text-sm"><b>Câu 6:</b> Cho hình vuông $ABCD$ cạnh $6\,\mathrm{cm}$. Bên trong vẽ hình quạt tròn tâm $A$ bán kính $6\,\mathrm{cm}$. Phần tô đậm nằm trong hình vuông và ngoài quạt tròn. Tính diện tích phần tô đậm? (Lấy $\pi\approx3{,}14$, làm tròn đến hàng phần mười).</div>
+          <div class="w-40 flex justify-center items-center">
+            <svg width="120" height="120" viewBox="-10 -10 120 120">
+              <rect x="0" y="0" width="100" height="100" fill="#94a3b8" stroke="#000" stroke-width="1.5" />
+              <path d="M 0 0 L 100 0 A 100 100 0 0 1 0 100 Z" fill="#ffffff" />
+              <rect x="0" y="0" width="100" height="100" fill="none" stroke="#0f172a" stroke-width="1.5" />
+              <path d="M 100 0 A 100 100 0 0 1 0 100" fill="none" stroke="#0f172a" stroke-width="1.5" />
+              <text x="-8" y="10" font-size="11" font-weight="bold">A</text>
+              <text x="103" y="10" font-size="11" font-weight="bold">B</text>
+              <text x="103" y="108" font-size="11" font-weight="bold">C</text>
+              <text x="-8" y="108" font-size="11" font-weight="bold">D</text>
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-center gap-2"><span class="text-xs font-bold text-slate-500">Đáp số:</span><input type="text" id="p3_q6" class="border rounded-lg p-2 font-mono font-bold w-44 outline-none focus:ring-2 focus:ring-purple-500"></div>
+      </div>
+    </section>
+
+    <!-- Nút Nộp Bài -->
+    <div class="text-center pt-2">
+      <button onclick="submitExam()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition">
+        NỘP BÀI THI
+      </button>
+    </div>
+
+    <!-- Bảng Kết Quả -->
+    <div id="result-box" class="hidden bg-white p-6 rounded-2xl shadow border border-slate-200 space-y-4">
+      <h3 class="text-lg font-bold text-center text-indigo-900 border-b pb-2">KẾT QUẢ BÀI THI</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-sm font-semibold">
+        <div class="bg-indigo-50 p-3 rounded-xl">Phần I: <span id="score-p1" class="text-indigo-600 text-base">0/3</span></div>
+        <div class="bg-amber-50 p-3 rounded-xl">Phần II: <span id="score-p2" class="text-amber-600 text-base">0/4</span></div>
+        <div class="bg-purple-50 p-3 rounded-xl">Phần III: <span id="score-p3" class="text-purple-600 text-base">0/3</span></div>
+        <div class="bg-emerald-50 p-3 rounded-xl">TỔNG ĐIỂM: <span id="score-total" class="text-emerald-600 text-xl font-bold">0.00</span> / 10</div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Đếm ngược 90 phút
+    let timeLeft = 90 * 60;
+    const timerEl = document.getElementById("timer");
+    const interval = setInterval(() => {
+      if (timeLeft <= 0) { clearInterval(interval); submitExam(); return; }
+      timeLeft--;
+      const m = Math.floor(timeLeft / 60);
+      const s = timeLeft % 60;
+      timerEl.innerText = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+    }, 1000);
+
+    // Đáp án chuẩn
+    const ANS_P1 = { q1:"B", q2:"B", q3:"A", q4:"B", q5:"A", q6:"B", q7:"D", q8:"A", q9:"D", q10:"D", q11:"A", q12:"C" };
+    const ANS_P2 = {
+      q1: [true, false, true, true],
+      q2: [true, false, true, true],
+      q3: [true, false, true, false],
+      q4: [true, true, false, false]
+    };
+    const ANS_P3 = { q1: "8", q2: "0.53", q3: "16", q4: "14.6", q5: "311", q6: "7.7" };
+
+    function submitExam() {
+      // Chấm Phần I (0.25đ/câu)
+      let p1 = 0;
+      for (let i = 1; i <= 12; i++) {
+        const sel = document.querySelector(`input[name="q${i}"]:checked`);
+        if (sel && sel.value === ANS_P1[`q${i}`]) p1 += 0.25;
+      }
+
+      // Chấm Phần II (Lũy tiến: 1 ý = 0.1đ; 2 ý = 0.25đ; 3 ý = 0.5đ; 4 ý = 1.0đ)
+      let p2 = 0;
+      const subKeys = ['a', 'b', 'c', 'd'];
+      for (let i = 1; i <= 4; i++) {
+        let correctCount = 0;
+        subKeys.forEach((k, idx) => {
+          const sel = document.querySelector(`input[name="p2_q${i}_${k}"]:checked`);
+          if (sel && (sel.value === 'true') === ANS_P2[`q${i}`][idx]) correctCount++;
+        });
+        if (correctCount === 1) p2 += 0.1;
+        else if (correctCount === 2) p2 += 0.25;
+        else if (correctCount === 3) p2 += 0.5;
+        else if (correctCount === 4) p2 += 1.0;
+      }
+
+      // Chấm Phần III (0.5đ/câu)
+      let p3 = 0;
+      for (let i = 1; i <= 6; i++) {
+        const val = (document.getElementById(`p3_q${i}`).value || "").trim().replace(',', '.');
+        if (val === ANS_P3[`q${i}`]) p3 += 0.5;
+      }
+
+      const total = p1 + p2 + p3;
+      document.getElementById("score-p1").innerText = `${p1.toFixed(2)}/3`;
+      document.getElementById("score-p2").innerText = `${p2.toFixed(2)}/4`;
+      document.getElementById("score-p3").innerText = `${p3.toFixed(2)}/3`;
+      document.getElementById("score-total").innerText = total.toFixed(2);
+      document.getElementById("result-box").classList.remove("hidden");
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
